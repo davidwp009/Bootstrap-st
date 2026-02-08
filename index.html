@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechStore | Гаджети та Техніка</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, #0d6efd 0%, #6610f2 100%);
+      color: white;
+      padding: 90px 0;
+    }
+
+    .hero img {
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    .product-card img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .category-box {
+      border-radius: 20px;
+      padding: 30px;
+      background: #f8f9fa;
+      transition: 0.3s;
+    }
+
+    .category-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .review-card {
+      border-radius: 20px;
+    }
+
+    footer {
+      background: #0b1220;
+      color: #d1d5db;
+    }
+
+    footer a {
+      color: #d1d5db;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">TechStore</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#products">Продукти</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Категорії</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Про нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Відгуки</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Контакти</a></li>
+        </ul>
+
+        <button class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" data-bs-toggle="modal" data-bs-target="#orderModal">
+          Замовити дзвінок
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h1 class="fw-bold display-5">Сучасна техніка для твого життя</h1>
+          <p class="mt-3 fs-5">
+            TechStore — магазин гаджетів, ноутбуків та аксесуарів. 
+            Якість, гарантія та швидка доставка по всій Польщі та Україні.
+          </p>
+
+          <div class="d-flex gap-3 mt-4 flex-wrap">
+            <a href="#products" class="btn btn-light btn-lg fw-semibold">Переглянути товари</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg fw-semibold">Зв'язатись</a>
+
+            <button class="btn btn-warning btn-lg fw-semibold" data-bs-toggle="modal" data-bs-target="#orderModal">
+              Замовити дзвінок
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80"
+            class="img-fluid" alt="tech">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="py-5" id="products">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Популярні продукти</h2>
+        <p class="text-muted">Топ продажів цього місяця</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card border-0 shadow-sm p-3">
+            <img src="./img/iphone-17.png"
+              class="img-fluid" alt="">
+            <div class="card-body">
+              <h5 class="fw-bold">iPhone 17 Pro</h5>
+              <p class="text-muted">Потужність, камера, стиль.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-primary fs-5">4999 zł</span>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#orderModal">
+                  Купити
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card border-0 shadow-sm p-3">
+            <img src="./img/macbook_air.png"
+              class="img-fluid" alt="">
+            <div class="card-body">
+              <h5 class="fw-bold">MacBook Air M2</h5>
+              <p class="text-muted">Легкий, швидкий, автономний.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-primary fs-5">5699 zł</span>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#orderModal">
+                  Купити
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card border-0 shadow-sm p-3">
+            <img src="./img/watch.png"
+              class="img-fluid" alt="">
+            <div class="card-body">
+              <h5 class="fw-bold">Smart Watch Pro</h5>
+              <p class="text-muted">Фітнес, повідомлення, контроль.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-primary fs-5">899 zł</span>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#orderModal">
+                  Купити
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES SECTION -->
+  <section class="py-5 bg-light" id="categories">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Категорії</h2>
+        <p class="text-muted">Обери те, що тобі потрібно</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="category-box text-center">
+            <h5 class="fw-bold">Смартфони</h5>
+            <p class="text-muted">Apple, Samsung, Xiaomi</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="category-box text-center">
+            <h5 class="fw-bold">Ноутбуки</h5>
+            <p class="text-muted">MacBook, Dell, HP</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="category-box text-center">
+            <h5 class="fw-bold">Аксесуари</h5>
+            <p class="text-muted">Чохли, зарядки, кабелі</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="category-box text-center">
+            <h5 class="fw-bold">Навушники</h5>
+            <p class="text-muted">AirPods, JBL, Sony</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="py-5" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+            class="img-fluid rounded-4 shadow" alt="">
+        </div>
+
+        <div class="col-lg-6">
+          <h2 class="section-title">Чому саме TechStore?</h2>
+          <p class="text-muted mt-3">
+            Ми працюємо тільки з перевіреними брендами, гарантуємо оригінальність продукції 
+            та підтримуємо клієнтів навіть після покупки.
+          </p>
+
+          <ul class="list-group list-group-flush mt-4">
+            <li class="list-group-item">✅ Офіційна гарантія</li>
+            <li class="list-group-item">🚚 Швидка доставка</li>
+            <li class="list-group-item">💳 Оплата частинами</li>
+            <li class="list-group-item">⭐ Понад 2000 позитивних відгуків</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="py-5 bg-light" id="reviews">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Відгуки клієнтів</h2>
+        <p class="text-muted">Нам довіряють тисячі людей</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card review-card border-0 shadow-sm p-4">
+            <h5 class="fw-bold">Олег</h5>
+            <p class="text-muted">"Замовив MacBook, прийшло швидко, все оригінальне!"</p>
+            <p class="text-warning mb-0">★★★★★</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card review-card border-0 shadow-sm p-4">
+            <h5 class="fw-bold">Марина</h5>
+            <p class="text-muted">"Купувала навушники JBL, дуже задоволена якістю."</p>
+            <p class="text-warning mb-0">★★★★★</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card review-card border-0 shadow-sm p-4">
+            <h5 class="fw-bold">Андрій</h5>
+            <p class="text-muted">"Класний сервіс, відповіли на всі питання."</p>
+            <p class="text-warning mb-0">★★★★☆</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-5" id="contact">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Зв'яжись з нами</h2>
+        <p class="text-muted">Залиш заявку і ми передзвонимо</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form class="p-4 shadow rounded-4 bg-white">
+            <div class="mb-3">
+              <label class="form-label">Ім’я</label>
+              <input type="text" class="form-control" placeholder="Введіть ваше ім’я">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="example@gmail.com">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Повідомлення</label>
+              <textarea class="form-control" rows="4" placeholder="Напишіть ваше повідомлення"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Надіслати
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h4 class="fw-bold text-white">TechStore</h4>
+          <p class="mt-3">
+            Магазин техніки та гаджетів. Працюємо швидко, якісно та чесно.
+          </p>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="text-white fw-bold">Меню</h5>
+          <ul class="list-unstyled mt-3">
+            <li><a href="#products">Продукти</a></li>
+            <li><a href="#categories">Категорії</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+            <li><a href="#contact">Контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="text-white fw-bold">Контакти</h5>
+          <ul class="list-unstyled mt-3">
+            <li>📍 Warszawa, Polska</li>
+            <li>📞 +48 555 444 333</li>
+            <li>✉️ techstore@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-4">
+
+      <p class="text-center mb-0 mt-3">
+        © 2026 TechStore. Всі права захищено.
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Замовити дзвінок</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Ім’я</label>
+              <input type="text" class="form-control" placeholder="Введіть ім’я">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Телефон</label>
+              <input type="tel" class="form-control" placeholder="+48 123 456 789">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Коментар</label>
+              <textarea class="form-control" rows="3" placeholder="Напишіть що вас цікавить"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Надіслати заявку
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="cobtainer">
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+        </div>
+    </div>
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input type="text" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">State</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <script src="./script.js"></script>
+</body>
+</html> -->
