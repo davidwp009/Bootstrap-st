@@ -1,3 +1,13 @@
+/* ===================== */
+/* NO HORIZONTAL SCROLL  */
+/* ===================== */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===================== */
+/* MOBILE ADAPTIVE 476px */
+/* ===================== */
 @media (max-width: 476px) {
 
   /* HERO SECTION */
@@ -57,5 +67,81 @@
   /* MODAL */
   .modal-dialog {
     margin: 15px;
+  }
+
+  /* NAVBAR */
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .navbar-toggler {
+    padding: 5px 10px;
+  }
+}
+
+/* ===================== */
+/* MOBILE ADAPTIVE 320px */
+/* ===================== */
+@media (max-width: 320px) {
+
+  /* HERO SECTION */
+  .hero {
+    padding: 40px 10px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero .btn {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  /* SECTION TITLES */
+  .section-title {
+    font-size: 22px;
+  }
+
+  /* PRODUCTS */
+  .product-card img {
+    height: 140px;
+  }
+
+  /* CATEGORIES */
+  .category-box {
+    padding: 15px;
+  }
+
+  /* REVIEWS */
+  .review-card {
+    padding: 15px;
+  }
+
+  /* CONTACT FORM */
+  form {
+    padding: 15px !important;
+  }
+
+  /* MODAL */
+  .modal-dialog {
+    margin: 10px;
+    max-width: 100%;
+  }
+
+  /* NAVBAR */
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .navbar-toggler {
+    padding: 4px 8px;
   }
 }
